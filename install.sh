@@ -30,7 +30,7 @@ fi
 
 # Обновление строки PASSWORD в docker-compose.yml
 if grep -q "PASSWORD" docker-compose.yml; then
-  sed -i -E "s/- PASSWORD=.*/- $PASSWORD/g" docker-compose.yml
+  sed -i -E "s/- PASSWORD=.*/- PASSWORD=$PASSWORD/g" docker-compose.yml
   echo "Пароль успешно обновлен в файле docker-compose.yml"
 else
   echo "Ошибка: ключ PASSWORD не найден в docker-compose.yml"
@@ -47,7 +47,7 @@ fi
 
 # Обновление строки WG_DEFAULT_ADDRESS в docker-compose.yml
 if grep -q "WG_DEFAULT_ADDRESS" docker-compose.yml; then
-  sed -i -E "s/- WG_DEFAULT_ADDRESS=.*/- $WG_DEFAULT_ADDRESS/g" docker-compose.yml
+  sed -i -E "s/- WG_DEFAULT_ADDRESS=.*/- WG_DEFAULT_ADDRESS=$WG_DEFAULT_ADDRESS/g" docker-compose.yml
   echo "Маска подсети успешно обновлена в файле docker-compose.yml"
 else
   echo "Ошибка: ключ WG_DEFAULT_ADDRESS не найден в docker-compose.yml"
