@@ -1,6 +1,4 @@
-apt update
-apt install -y docker.io docker-compose
-systemctl enable --now docker
+#!/bin/bash
 
 # https://github.com/AdguardTeam/AdGuardHome/wiki/Docker#resolved-daemon
 mkdir -p /etc/systemd/resolved.conf.d
