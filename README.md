@@ -1,2 +1,2 @@
 # adwireguard-installer
-Script for istall https://github.com/gyaneesh/adwireguard
+Script for install https://github.com/gyaneesh/adwireguard
